@@ -1,7 +1,10 @@
 const express=require('express');
 const port=8000;
+const index_route=require('./routes/index');
 
 const app=express();
+
+app.get('/',index_route);
 
 app.listen(port,function(err)
 {
