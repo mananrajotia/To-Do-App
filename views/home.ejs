@@ -9,18 +9,37 @@
             Rendered view of todo_app
         </h1>
 
-        <form>
-            <input type="text">
-            <input list="category">
+        <form action="/add_task" method="POST">
+            <input type="text" name="task">
+            <input list="category" name="category">
             <datalist id="category">
                 <option value="Academic">
                 <option value="Work">
                 <option value="Miscellaneous">
             </datalist>
-            <input type="date">
+            <input type="date" name="date">
             <button>
                 Submit
             </button>
         </form>
+
+        <div id="display_screen">
+            <%for (let i of tasks) { %>
+                <div>
+                    <%=i.task%>
+                </div>
+                <div>
+                    <%=i.category%>
+                </div>
+                <div>
+                    <%=i.date%>
+                </div>
+                <div>
+                    <a href="/delete_task/?id=<%=i._id%>">
+                        DELETE
+                    </a>
+                </div>
+            <% } %>
+        </div>
     </body>
 </html>
