@@ -1,45 +1,77 @@
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="https://kit.fontawesome.com/39ed02b50c.js" crossorigin="anonymous"></script>
         <title>
             <%=title%>
         </title>
     </head>
     <body>
-        <h1>
-            Rendered view of todo_app
-        </h1>
+        <div id="container" class="center">
+            <div id="workspace">
+                <div id="fixed">
+                    <div id="heading_case">
+                        <div id="heading" class="center">
+                            Task Master
+                        </div>
+                    </div>
+                    
+                    <div id="form" class="center">
+                        <form action="/add_task" method="POST">
+                            <div class="form_center">
+                                <input type="text" name="task" placeholder="Enter task">
+                            </div>
+                            <br>
+                            <div class="form_center">
+                                <input list="category" name="category" placeholder="What category?">
+                            </div>
+                            <datalist id="category">
+                                <option value="Personal">
+                                <option value="Academic">
+                                <option value="Work">
+                                <option value="Miscellaneous">
+                            </datalist>
+                            <br>
+                            <div class="form_center">
+                                <input type="date" name="date">
+                            </div>
+                            <br>
+                            <div class="form_center">
+                                <button>
+                                    <b>SUBMIT</b>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
 
-        <form action="/add_task" method="POST">
-            <input type="text" name="task">
-            <input list="category" name="category">
-            <datalist id="category">
-                <option value="Academic">
-                <option value="Work">
-                <option value="Miscellaneous">
-            </datalist>
-            <input type="date" name="date">
-            <button>
-                Submit
-            </button>
-        </form>
+                <br>
+                <br>
+                <div id="display_screen">
+                    <%for (let i of tasks) { %>
+                        <div id="task">
+                            <div id="task_info">
+                                <div>
+                                    <%=i.task%>
+                                </div>
+                                <br>
+                                <div>
+                                    Due Date: <%=i.date%>
+                                </div>
+                            </div>
 
-        <div id="display_screen">
-            <%for (let i of tasks) { %>
-                <div>
-                    <%=i.task%>
+                            <div id="category_div">
+                                <%=i.category%>
+                            </div>
+                            <div id="delete">
+                                <a href="/delete_task/?id=<%=i._id%>">
+                                    <i class="fas fa-check-circle"></i>
+                                </a>
+                            </div>
+                        </div>
+                    <% } %>
                 </div>
-                <div>
-                    <%=i.category%>
-                </div>
-                <div>
-                    <%=i.date%>
-                </div>
-                <div>
-                    <a href="/delete_task/?id=<%=i._id%>">
-                        DELETE
-                    </a>
-                </div>
-            <% } %>
+            </div>
         </div>
     </body>
 </html>

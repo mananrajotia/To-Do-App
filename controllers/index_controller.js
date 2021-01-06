@@ -9,7 +9,7 @@ const index_controller=function(req,res){
                 console.log("Error fetching tasks from db!");
                 return;
             }
-            return res.render("home",{title:"page", tasks:tasks});
+            return res.render("home",{title:"Task Master", tasks:tasks});
         })
 };
 

@@ -1,0 +1,166 @@
+body
+{
+    background-color: #0909af;
+	color: white;
+	font-family: "Bahnschrift";
+	text-shadow: 0.5px 0.5px black;
+    letter-spacing: 0.05rem;
+}
+
+#display_screen
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 200px;
+    width: 100%;
+    overflow: auto;
+}
+
+#workspace
+{
+    background-image: url("blue_pattern.png");
+    border-radius: 20px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.center
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#fixed
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#task
+{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0909af;
+    border-radius: 25px;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+i
+{
+    color: white;
+    height: 20px;
+    width: 20px;
+}
+#container
+{
+    height: 100%;
+}
+#heading
+{
+    background-image: url("heading_pattern.jpg");
+    -webkit-text-stroke: 3px black;
+    border-radius: 10px;
+    margin: 10px;
+    margin-top: 20px;
+    width: 50%;
+    height: 75px;
+    font-size: 40;
+}
+#heading_case
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+input
+{
+	padding-left: 10px; 
+	padding-top:5px;
+    padding-bottom: 5px;
+    padding-right: 8px;
+	background-color: #0909af;
+    color: rgb(199, 189, 189);
+	font-family: Bahnschrift;
+	text-shadow: 0.5px 0.5px black;
+	letter-spacing: 0.05rem;
+	border: 0px;
+    border-radius: 10px;
+    width: 40%;
+}
+
+::placeholder
+{
+    color: rgb(199, 189, 189);
+    opacity: 0.8;
+}
+
+.form_center
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+button
+{
+    background-color: white;
+    color: black;
+	font-family: "Bahnschrift";
+    text-shadow: 0.5px 0.5px black;
+    letter-spacing: 0.05rem;
+    border: 1px solid black;
+    border-radius: 14px;
+    height: 30px;
+    width: 70px;
+}
+
+#category_div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("black_pattern.jpg");
+    color: white;
+	font-family: "Bahnschrift";
+	text-shadow: 0.5px 0.5px black;
+    letter-spacing: 0.05rem;
+    border: 0px;
+    border-radius: 14px;
+    height: 30px;
+    width: 150px;
+}
+
+
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(100%) brightness(80%);
+}
+
+#task_info
+{
+    width: 60%;
+}
+
+#form
+{
+    width: 100%;
+}
+form
+{
+    width: 100%;
+}
